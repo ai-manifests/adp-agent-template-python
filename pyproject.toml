@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-adp-agent"
+version = "0.1.0"
+description = "ADP agent built on the adp-agent reference implementation. Fork this template, edit agents/example.json and src/my_adp_agent/evaluator.py, and you have a federation-ready agent."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+
+dependencies = [
+    "adp-agent>=0.1.0",
+    # Uncomment to enable the optional Neo3 calibration anchor:
+    # "adp-agent-anchor>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+]
+
+[project.scripts]
+my-adp-agent = "my_adp_agent.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
