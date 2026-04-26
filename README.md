@@ -2,13 +2,13 @@
 
 A forkable Python 3.11+ starter for building an [Agent Deliberation Protocol](https://adp-manifest.dev) agent on the Python / FastAPI runtime. Clone this, edit `agents/example.json` and `src/my_adp_agent/evaluator.py`, and you have a federation-ready agent.
 
-Depends on [`adp-agent`](https://git.marketally.com/ai-manifests/adp-agent-python) from the Gitea PyPI feed.
+Depends on [`adp-agent`](https://github.com/ai-manifests/adp-agent-python) from the Gitea PyPI feed.
 
 ## 30-second quickstart
 
 ```bash
 # 1. Clone
-git clone https://git.marketally.com/ai-manifests/adp-agent-template-python.git my-adp-agent
+git clone https://github.com/ai-manifests/adp-agent-template-python.git my-adp-agent
 cd my-adp-agent
 
 # 2. Install (pip reads pip.conf for the Gitea index)
