@@ -11,8 +11,7 @@ Depends on [`adp-agent`](https://github.com/ai-manifests/adp-agent-python) from 
 git clone https://github.com/ai-manifests/adp-agent-template-python.git my-adp-agent
 cd my-adp-agent
 
-# 2. Install (pip reads pip.conf for the Gitea index)
-export PIP_CONFIG_FILE=$(pwd)/pip.conf
+# 2. Install
 pip install -e '.[dev]'
 
 # 3. Generate a bearer token
@@ -114,10 +113,6 @@ docker run -p 3000:3000 \
   -v $(pwd)/journal:/app/journal \
   my-adp-agent:latest
 ```
-
-## PyPI feed
-
-`adp-agent` is published to the `ai-manifests` Gitea PyPI feed. The `pip.conf` at the repo root configures pip to use that feed as an extra index (falling back to public PyPI for everything else). Activate it by setting `PIP_CONFIG_FILE=$(pwd)/pip.conf` in your shell before running `pip install`, or copy it to your user-level pip config.
 
 ## Federation checklist
 
